@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from rest_framework import generics
+from . import models, serializers
 
-# Create your views here.
+
+class InflowCreateListAPIView(generics.ListCreateAPIView):
+    queryset = models.Inflow.objects.all()
+    serializer_class = serializers.InflowSerializer
+
+
+class InflowRetriveAPIView(generics.RetrieveAPIView):
+    queryset = models.Inflow.objects.all()
+    serializer_class = serializers.InflowSerializer
