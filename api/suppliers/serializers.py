@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from categories.models import Category
+from suppliers.models import Supplier
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class SupplierSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Category
+        model = Supplier
         fields = '__all__'

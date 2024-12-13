@@ -2,11 +2,11 @@ from rest_framework import generics
 from . import models, serializers
 
 
-class CategoryCreateListAPIView(generics.ListCreateAPIView):
-    queryset = models.Category.objects.all()
-    serializer_class = serializers.CategorySerializer
+class SupplierCreateListAPIView(generics.ListCreateAPIView):
+    queryset = models.Supplier.objects.all()
+    serializer_class = serializers.SupplierSerializer
 
 
-class CategoryRetriveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.Category.objects.all()
-    serializer_class = serializers.CategorySerializer
+class SupplierRetriveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Supplier.objects.all()
+    serializer_class = serializers.SupplierSerializer
